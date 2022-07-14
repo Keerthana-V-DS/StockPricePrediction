@@ -20,6 +20,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from GoogleNews import GoogleNews
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+nltk.download()
 
 def main():
     # global tickers
