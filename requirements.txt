@@ -12,3 +12,4 @@ googlenews
 nltk
 prophet
 spacy
+plotly
