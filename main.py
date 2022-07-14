@@ -22,7 +22,7 @@ from GoogleNews import GoogleNews
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 import spacy
-#spacy.load('en_core_web_sm')
+spacy.load('en_core_web_sm')
 try:
     nlp = spacy.load("en_core_web_md")
 except:  # If not present, we download
