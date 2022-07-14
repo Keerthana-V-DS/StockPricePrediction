@@ -22,6 +22,8 @@ from GoogleNews import GoogleNews
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 import spacy
+nltk.download('vader_lexicon')
+spacy.load("en_core_web_sm")
 # nlp = spacy.load("en_core_web_sm")
 # try:
 #     nlp = spacy.load("en_core_web_sm")
