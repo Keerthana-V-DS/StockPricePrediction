@@ -1,3 +1,4 @@
+spacy
 matplotlib
 requests
 streamlit
@@ -12,4 +13,3 @@ googlenews
 nltk
 prophet
 plotly
-spacy>=2.0.0,<3.0.0
