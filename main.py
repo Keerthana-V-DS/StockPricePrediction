@@ -21,7 +21,9 @@ import plotly.graph_objects as go
 from GoogleNews import GoogleNews
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download()
-
+import spacy
+spacy.load('en_core_web_sm')
+from spacy.lang.en import English
 def main():
     # global tickers
     # tickers = ['AMZN','AAPL','TCS.NS','GOOG','ITC.NS','IDEA.NS','BPCL.NS', 'ONGC.NS', 'RDS-A', 'RDS-B','INFY.NS', 'ABBOTINDIA.NS']
