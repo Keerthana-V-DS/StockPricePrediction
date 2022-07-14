@@ -22,7 +22,12 @@ from GoogleNews import GoogleNews
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download()
 import spacy
-spacy.load('en_core_web_sm')
+#spacy.load('en_core_web_sm')
+try:
+    nlp = spacy.load("en_core_web_md")
+except:  # If not present, we download
+    spacy.cli.download("en_core_web_md")
+    nlp = spacy.load("en_core_web_md")
 from spacy.lang.en import English
 def main():
     # global tickers
