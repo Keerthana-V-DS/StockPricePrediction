@@ -11,6 +11,5 @@ beautifulsoup4
 googlenews
 nltk
 prophet
-spacy
 plotly
-en_core_web_sm
+spacy>=2.0.0,<3.0.0

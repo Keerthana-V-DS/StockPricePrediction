@@ -23,10 +23,9 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 import spacy
 
-import en_core_web_sm
-nlp = en_core_web_sm.load()
+#nlp = en_core_web_sm.load()
 try:
-    nlp = spacy.load("en_core_web_md")
+    nlp = spacy.load("en_core_web_sm")
 except:  # If not present, we download
     spacy.cli.download("en_core_web_md")
     nlp = spacy.load("en_core_web_md")
