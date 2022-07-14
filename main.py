@@ -23,14 +23,9 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 import spacy
 nltk.download('vader_lexicon')
-spacy.load("en_core_web_sm")
-# nlp = spacy.load("en_core_web_sm")
-# try:
-#     nlp = spacy.load("en_core_web_sm")
-# except:  # If not present, we download
-#     spacy.cli.download("en_core_web_md")
-#     nlp = spacy.load("en_core_web_md")
-from spacy.lang.en import English
+
+
+
 def main():
     # global tickers
     # tickers = ['AMZN','AAPL','TCS.NS','GOOG','ITC.NS','IDEA.NS','BPCL.NS', 'ONGC.NS', 'RDS-A', 'RDS-B','INFY.NS', 'ABBOTINDIA.NS']
@@ -118,7 +113,11 @@ def main():
         st.markdown("<h3 style='text-align: center;'>Latest News!</h3>", unsafe_allow_html=True)
         # st.markdown("![Alt Text](https://i.gifer.com/7D7o.gif)")
         HTML_WRAPPER = """<div style="overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem; margin-bottom: 2.5rem">{}</div>"""
-        nlp = spacy.load("en_core_web_sm")
+        try:
+            nlp = spacy.load("en_core_web_sm")
+        except:  # If not present, we download
+            spacy.cli.download("en_core_web_sm")
+            nlp = spacy.load("en_core_web_sm")
 
         df = pd.read_csv('data/ind_nifty500list.csv')
         st.header('Stock Universe')
