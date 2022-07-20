@@ -572,10 +572,11 @@ def main():
         try:    
             st.plotly_chart(plot(m, forecast))
             href = f'<a href="">Download Forecast Output</a>'
+            st.markdown(href, unsafe_allow_html=True)
         except:
             pass
         
-        st.markdown(href, unsafe_allow_html=True)
+        
 
 
 if __name__ == '__main__':
