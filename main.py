@@ -461,8 +461,12 @@ def main():
             We can use the slider at the bottom or the buttons at the top to focus on a specific time period.
             """)
             st.write("")
-        st.plotly_chart(plot(m, forecast))
-        st.write("## Statistical Test")
+        try:    
+            st.plotly_chart(plot(m, forecast))
+            st.write("## Statistical Test")
+        except:
+            pass
+        
         with st.expander("More info on Statistical Test", expanded=False):
             st.write("""
             The following statistical test can be computed:
