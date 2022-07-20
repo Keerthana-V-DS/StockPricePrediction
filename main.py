@@ -569,7 +569,10 @@ def main():
             The following visualization shows this breakdown and allows you to understand how each component contributes
             to the final value forecasted by the model.
             """)
-        st.plotly_chart(plot(m, forecast))
+        try:    
+            st.plotly_chart(plot(m, forecast))
+        except:
+            pass
         href = f'<a href="">Download Forecast Output</a>'
         st.markdown(href, unsafe_allow_html=True)
 
